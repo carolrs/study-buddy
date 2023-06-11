@@ -8,7 +8,7 @@ This project is the result of collaborative work by a team of dedicated develope
 
 - Create and Join Study Groups: Users can form their own study groups or join existing ones, promoting a collaborative learning environment.
 - Forum Chats: Each study group has a chat forum for members to interact, discuss ideas, ask questions, and learn from each other.
-- Sheldon AI: A powerful AI assistant within the chat forum, Sheldon AI can answer questions on various topics, providing immediate and accurate responses to aid students' understanding.
+- Sheldon AI: A powerful AI assistant within the chat forum, Sheldon AI can answer questions on various topics, providing immediate and accurate responses to aid students' understanding. The Ai was trained to respond like the iconic character Sheldon Cooper from the Big Bang Theory show
 - Integrated Study Resources: The platform also includes useful tools like a pomodoro timer for efficient time management, a mirror for self-reflection, and Excalidraw for creating diagrams or illustrations.
 
 # Technologies Used
@@ -55,3 +55,11 @@ cd frontend
 npm start
 ```
 The application will now be running locally on your machine. By default, the frontend application runs on port 3000, so you can navigate to http://localhost:3000 in your browser to see the application in action.
+
+# Disclaimer
+
+This project, including the Sheldon AI, is intended for educational purposes only. It is a personal, non-commercial project developed as part of a software development learning process. The Sheldon AI is a homage to the character Sheldon Cooper from the television series "The Big Bang Theory."
+
+The use of the name and character is done out of appreciation and is not intended to infringe upon the copyrights or trademarks of the creators, producers, or distributors of "The Big Bang Theory." This project is not intended for commercial use, will not be used for commercial gain, and is not intended for commercial distribution.
+
+Please note that this project is not officially associated or affiliated with "The Big Bang Theory" in any way.
