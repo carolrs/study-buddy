@@ -1,4 +1,9 @@
 # Study Buddy
+# Home
+![Class System Design Drawing](doc/study-buddy-home.png?raw=true "Study Buddy Home")
+
+# Chat
+![Class System Design Drawing](doc/study-buddy-blue.png?raw=true "Study Buddy Chat")
 
 Study Buddy is an innovative collaborative learning platform designed to help students form and join study groups, exchange knowledge, and access various study resources. One of the standout features of Study Buddy is 'Sheldon AI', an intelligent system integrated within the platform that can answer various study-related questions.
 
