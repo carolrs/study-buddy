@@ -1,7 +1,7 @@
 .sidebar {
   width: 140px;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #424e77;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +22,7 @@
 .username {
   margin-bottom: 2em;
   font-size: 1em;
-  color: #333;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   width: 100%;
   padding: 1em 0;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   display: flex;
   align-items: center;
   transition: background-color 0.2s ease;
@@ -44,7 +44,7 @@
 }
 
 .side-bar-item:hover, .dropbtn:hover {
-  background-color: #f4f4f4;
+  background-color: #3a4c84;
 }
 
 .dropdown {
@@ -57,40 +57,41 @@
   display: none;
   position: absolute;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(72, 66, 249, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(51, 32, 32, 0.2);
   z-index: 1;
-  background-color: #fdfbfb;
+  background-color: #f3f3f6;
   width: 100%;
   top: 100%;
 }
 
 .dropdown-content a {
-  color: #333;
+  color: #f3f0f0;
   padding: 1em;
   text-decoration: none;
   display: block;
-  background-color: #f4f4f4;
+  background-color: #3c4b7e;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  color: #5e6b91;
 }
 
 .study-groups {
   width: 100%;
-  color: #333;
+  color: #fffefe;
   padding-top: 1em;
 }
 
 .group-title {
   font-size: 1em;
-  color: #333;
+  color: #f8f6f6;
   margin-bottom: 1em;
 }
 
 .group-list {
   width: 100%;
-  color: #333;
+  color: #fefefe;
   max-height: 125px;
   overflow-y: auto; 
 }
@@ -98,11 +99,11 @@
 .group-list a {
   display: block;
   text-decoration: none;
-  color: #333;
+  color: #f3f1f1;
   padding: 0.5em 0;
   transition: background-color 0.2s ease;
 }
 
 .group-list a:hover {
-  background-color: #f4f4f4;
+  background-color: #3a4c84;
 }

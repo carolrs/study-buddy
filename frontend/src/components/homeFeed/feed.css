@@ -104,7 +104,7 @@ textarea {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
-  background-color: #4CAF50; /* Green */
+  background-color: #4d91d5; /* Green */
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -112,14 +112,13 @@ textarea {
 
 /* Add a hover effect for the button */
 .filter-box button:hover {
-  background-color: #45a049;
+  background-color: #4482e4;
 }
 
 .studdybuddy {
   text-align: center;
   margin-bottom: 20px;
   font-size: 30px;
-  background-color: #5f81f2;
   transition: background-color 0.3s;
 }
 
@@ -156,7 +155,7 @@ textarea {
   padding: 10px;
   font-size: 16px;
   border: none;
-  background-color: #5f81f2; /* background color set to white */
+  background-color: #2d4185; /* background color set to white */
   color: #ffffff;
   border-radius: 15px;
   cursor: pointer;
@@ -164,33 +163,33 @@ textarea {
 }
 
 .filter-button:hover {
-  background-color: #45a049;
+  background-color: #436eb1;
 }
 
 
 .create-study-group {
 
-  width: 100%;
+
   padding: 10px;
   border: none;
-  border-radius: 5px;
-  background-color: #5f81f2;
+  border-radius: 10px;
+  background-color: #3b5098;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .create-study-group:hover {
-  background-color: #45a049;
+  background-color: #436eb1;
 }
 
 .logo-container {
-  background-color: white;
   border-radius: 50% 0 0 50%;
   float: right;
   padding: 45px;
 }
+
 /* All your other CSS rules... */
 
 

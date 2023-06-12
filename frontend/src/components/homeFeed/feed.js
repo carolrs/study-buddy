@@ -150,7 +150,7 @@ const Feed = ({ navigate }) => {
       <>
       <div className="studdybuddy">
         <div className='logo-container'>
-          <i className="fa-solid fa-users" style={{fontSize:'50px', color: '#5f81f2'}}></i>
+          <i className="fa-solid fa-users" style={{fontSize:'50px', color: '#3b5098'}}></i>
         </div>
         <h1 className='studdybuddy-color-white studdybuddy-font'>study buddy</h1>
       </div>
