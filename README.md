@@ -1,6 +1,6 @@
 # Study Buddy
 # Home
-![Class System Design Drawing](doc/study-buddy-home.png?raw=true "Study Buddy Home")
+![Class System Design Drawing](doc/study-budy-home.png?raw=true "Study Buddy Home")
 
 # Chat
 ![Class System Design Drawing](doc/study-buddy-blue.png?raw=true "Study Buddy Chat")
