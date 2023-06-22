@@ -118,7 +118,6 @@ const Feed = ({ navigate }) => {
 
       const data = await response.json();
       setGroups(data.groups);
-      console.log(data.groups);
     } catch (error) {
       console.error('Error searching groups:', error);
     }
@@ -138,8 +137,7 @@ const Feed = ({ navigate }) => {
     })
       .then(response => response.json())
       .then(data => {
-        // Handle the response if needed
-        console.log(data);
+
         handleSearch()
         navigate(`/groups/${groupId}`)
       })

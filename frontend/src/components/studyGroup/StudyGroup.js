@@ -33,7 +33,6 @@ const StudyGroup = () => {
           setToken(window.localStorage.getItem("token"));
           setPosts(data.group.posts);
           setGroup(data.group);
-          console.log("group: ", data.group);
         });
     }
   }, [token, groupId]);
@@ -78,8 +77,6 @@ const StudyGroup = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("newPost: ", newPost);
-    console.log("username: ", username);
     fetch("/groups/" + groupId + "/posts", {
       method: "POST",
       headers: {

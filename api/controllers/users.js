@@ -33,16 +33,13 @@ const UsersController = {
           message: "Error processing request",
         });
       }
-      console.log("req.body.email", req.body.email)
 
       User.findOne({email: req.body.email}, (err, userCheck) => {
         if (userCheck) {
           return res.status(400).json({ message: "Email already exists" });
         }
-        console.log("userCheck", userCheck)
 
         const user = new User(req.body);
-        console.log("user", user)
 
         if (req.file) {
           user.avatar = `${req.protocol}://${req.get("host")}/avatars/${req.file.filename}`;
@@ -61,10 +58,7 @@ const UsersController = {
   },
 
   Update: (req, res) => {
-    const UserId = TokenDecoder.decode(req.cookies.token).user_id;
-    console.log("decoded_user_id", UserId);
 
-    console.log("Request data:", req.body);
     const { email, username, password, firstName, lastName, } = req.body;
 
     const updateFields = {};

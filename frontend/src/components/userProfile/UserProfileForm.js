@@ -76,12 +76,11 @@ const UserProfileForm = ({ navigate }) => {
         })
       })
       .then((response) => {
-        console.log('Response:', response);  // log the full response
+        console.log('Response:', response);  
         console.log('Response status:', response.status);
         if (response.status === 200) {
           setSuccessMessage("Your changes have been updated successfully.");
     
-          // Clear the input fields
           setEmail("");
           setUsername("");
           setPassword("");
@@ -92,7 +91,7 @@ const UserProfileForm = ({ navigate }) => {
         }
       })
       .catch((error) => {
-        console.log('Error:', error);  // log the error
+        console.log('Error:', error);  
         setSuccessMessage("Changes failed, please try again.");
       });
     };

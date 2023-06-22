@@ -5,21 +5,20 @@ const TokenGenerator = require("../models/token_generator");
 const mongoose = require('mongoose');
 const multer = require("multer");
 
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    // Specify the destination directory to save the uploaded avatar images
+
     cb(null, "avatars");
   },
   filename: (req, file, cb) => {
-    // Generate a unique filename for the uploaded file
-    //
+
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
     const fileExtension = file.originalname.split(".").pop();
     cb(null, "group-" + uniqueSuffix + "." + fileExtension);
   },
 });
 
-// Create multer upload instance
 const upload = multer({ storage: storage });
 
 
@@ -88,49 +87,7 @@ const GroupController = {
     }
   })
   },
-  // Create: (req, res) => {
-  //     upload.single("groupCard")(req, res, (err) => {
-  //       if (err instanceof multer.MulterError) {
-  //         res.status(500).json({
-  //           message: "Error uploading avatar image",
-  //         });
-  //       } else if (err) {
-  //         res.status(500).json({
-  //           message: "Error processing request",
-  //         });
-  //       }
-
-  //       let { name, category, subcategory, level, partySize, groupType } = req.body;
-  //       const isPrivate = groupType === 'private';
-  //       const userId = req.user_id;
-  //       category = mongoose.Types.ObjectId(category);
-  //       subcategory = mongoose.Types.ObjectId(subcategory);
-    
-  //       const group = new Group({ name, category, subcategory, level, partySize, private: isPrivate,
-  //        });
-  //        console.log("Req file", req.file)
-  //       if (req.file) {
-  //         group.groupCard = `${req.protocol}://${req.get("host")}/avatars/${req.file.filename}`;
-  //       }
-
-  //       group.members.push(userId);
-  //       group.save().
-  //         then((group) => {
-  //         User.findById(userId)
-  //         .then((user) => {
-  //           user.groups.push(group._id);
-  //           user.save()
-  //           .then((savedUser) => {
-  //             console.log("savedUser: ", savedUser)
-  //             const token = TokenGenerator.jsonwebtoken(req.user_id);
-  //             res.status(201).json({ group: group, token: token });
-  //           })
-  //         });
   
-  //       });
-  
-  //     });
-  // },
   Update: async (req, res) => {
     try {
       const group = await Group.findByIdAndUpdate(req.params.id, req.body, { new: true }).exec();
@@ -216,7 +173,7 @@ const GroupController = {
         group.members.splice(index, 1);
       }
       await group.save();
-      // Remove the group from the user’s groups
+
       const user = await User.findById(userId).exec();
       const userGroupIndex = user.groups.indexOf(groupId);
       if (userGroupIndex > -1) {
@@ -259,16 +216,13 @@ const GroupController = {
     try {
       const groupId = req.params.id;
       const { message, user } = req.body;
-      console.log("user: ", user)
-      const userProjection = await User.findOne({ username: user },'_id').exec();
-      console.log("userId: ", userProjection)
+      const userProjection = await User.findOne( {username: user},'_id').exec();
 
       const group = await Group.findById(groupId).exec();
       if (!group) {
         return res.status(404).json({ message: "Group not found" });
       }
   
-      // Create a new post and add it to the group
       const newPost = new Post({ message, group: group._id, user: userProjection._id});
       await newPost.save();
   
@@ -295,7 +249,6 @@ const GroupController = {
         return res.status(404).json({ message: "Group not found" });
       }
   
-      // Create a new post and add it to the group
       const newPost = new Post({ message, group: group._id, ai_question });
       await newPost.save();
   

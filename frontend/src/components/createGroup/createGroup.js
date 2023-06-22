@@ -39,7 +39,6 @@ const CreateGroup = () => {
     try {
       const response = await fetch(`/categories/${selectedCategory}/subcategories`);
       const data = await response.json();
-      console.log("selectedCategory: ",data);
       setSubcategories(data.subcategories);
     } catch (error) {
       console.error('Error fetching subcategories:', error);

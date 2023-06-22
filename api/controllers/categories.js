@@ -13,11 +13,9 @@ const getAllCategories = async (req, res) => {
 
 const getSubcategoriesByCategory = async (req, res) => {
   const selectedCategory = req.params.category;
-  console.log("selectedCategory: ",selectedCategory);
   try {
     const subcategories = await Subcategory.find({category: selectedCategory})
     ;
-    console.log("subcategories: ",subcategories);
 
     if (!subcategories) {
       return res.status(404).json({ error: 'Category not found' });
